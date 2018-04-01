@@ -24,11 +24,12 @@ void printmenu(){
     printf("sw para Store Word\n");
     printf("sh para Store Half Word\n");
     printf("sb para Store Byte\n");
+    printf("dump para imprimir o conteudo da memoria(Dump Memory)\n");
     printf("exit para finalizar o programa.\n\n");
     printf(">>");
 }
 
-int32_t lw(int32_t address, int16_t kte){
+int32_t lw(uint32_t address, int16_t kte){
 	int32_t res = 0x00000000;
     if((kte % 4 == 0) && (address % 4 == 0)){
         res = mem[address + (kte / 4)];
@@ -39,7 +40,7 @@ int32_t lw(int32_t address, int16_t kte){
         return 0;
 }
 
-int32_t lh(int32_t address, int16_t kte){
+int32_t lh(uint32_t address, int16_t kte){
 	int32_t aux = 0x00000000, res;
     if((kte % 2 == 0) && (address % 2 == 0)){
         if(((address + kte) % 4) == 0){
@@ -59,17 +60,17 @@ int32_t lh(int32_t address, int16_t kte){
         printf("ERRO! REPITA O COMANDO\n");
         return 0;
 }
-int32_t lhu(int32_t address, int16_t kte){
+int32_t lhu(uint32_t address, int16_t kte){
 	int32_t aux = 0x00000000, res;
     if((kte % 2 == 0) && (address % 2 == 0)){
         if(((address + kte) % 4) == 0){
             res = 0x0000ffff;
-            aux = mem[address + (kte / 2)];
+            aux = mem[address + (kte / 4)];
             res &= aux;
         }
-        else if(((address + kte) % 4) == 2){
+        else if(((address + kte) % 4) == 2 || ((address + kte) % 4) == -2){
             res = 0xffff0000;
-            aux = mem[address + (kte / 2)];
+            aux = mem[address + (kte / 4)];
             res &= aux;
             res >>= 16;
         }
@@ -80,26 +81,26 @@ int32_t lhu(int32_t address, int16_t kte){
         return 0;
 }
 
-int32_t lb(int32_t address, int16_t kte){
+int32_t lb(uint32_t address, int16_t kte){
 	int32_t aux = 0x00000000, res;
     if(((address + kte) % 4) == 0){
         res = 0x000000ff;
         aux = mem[address + (kte / 4)];
         res &= aux;
     }
-    else if(((address + kte) % 4) == 1){
+    else if(((address + kte) % 4) == 1 || ((address + kte) % 4) == -1){
         res = 0x0000ff00;
         aux = mem[address + (kte / 4)];
         res &= aux;
         res >>= 8;
     }
-    else if(((address + kte) % 4) == 2){
+    else if(((address + kte) % 4) == 2 || ((address + kte) % 4) == -2){
         res = 0x00ff0000;
         aux = mem[address + (kte / 4)];
         res &= aux;
         res >>= 16;
     }
-    else if(((address + kte) % 4) == 3){
+    else if(((address + kte) % 4) == 3 || ((address + kte) % 4) == -3){
         res = 0xff000000;
         aux = mem[address + (kte / 4)];
         res &= aux;
@@ -107,26 +108,26 @@ int32_t lb(int32_t address, int16_t kte){
     }
     return res;
 }
-int32_t lbu(int32_t address, int16_t kte){
+int32_t lbu(uint32_t address, int16_t kte){
 	int32_t aux = 0x00000000, res;
     if(((address + kte) % 4) == 0){
         res = 0x000000ff;
         aux = mem[address + (kte / 4)];
         res &= aux;
     }
-    else if(((address + kte) % 4) == 1){
+    else if(((address + kte) % 4) == 1 || ((address + kte) % 4) == -1){
         res = 0x0000ff00;
         aux = mem[address + (kte / 4)];
         res &= aux;
         res >>= 8;
     }
-    else if(((address + kte) % 4) == 2){
+    else if(((address + kte) % 4) == 2 || ((address + kte) % 4) == -2){
         res = 0x00ff0000;
         aux = mem[address + (kte / 4)];
         res &= aux;
         res >>= 16;
     }
-    else if(((address + kte) % 4) == 3){
+    else if(((address + kte) % 4) == 3 || ((address + kte) % 4) == -3){
         res = 0xff000000;
         aux = mem[address + (kte / 4)];
         res &= aux;
@@ -135,12 +136,78 @@ int32_t lbu(int32_t address, int16_t kte){
     return res;
 }
 
+void sw(uint32_t address, int16_t kte, int32_t dataw){
+    if((kte % 4 == 0) && (address % 4 == 0)){
+        mem[address + (kte / 4)] = dataw;
+    }
+    else
+        printf("ERRO! REPITA O COMANDO\n");
+}
+
+void sh(uint32_t address, int16_t kte, int16_t datahw){
+    int32_t res, aux;
+    if((kte % 2 == 0) && (address % 2 == 0)){
+        if(((address + kte) % 4) == 0){
+            res = 0xffff0000;
+            aux = mem[address + (kte / 4)];
+            res &= aux;
+            mem[address + (kte / 4)] = res | datahw;
+        }
+        else if(((address + kte) % 4) == 2 || ((address + kte) % 4) == -2){
+            res = 0x0000ffff;
+            aux = mem[address + (kte / 4)];
+            datahw <<= 16;
+            res &= aux;
+            mem[address + (kte / 4)] = res | datahw;
+        }
+    }
+    else
+        printf("ERRO! REPITA O COMANDO\n");
+}
+
+void sb(uint32_t address, int16_t kte, int8_t datab){
+    int32_t res, aux;
+    if(((address + kte) % 4) == 0){
+        res = 0xffffff00;
+        aux = mem[address + (kte / 4)];
+        res &= aux;
+        mem[address + (kte / 4)] = res | datab;
+    }
+    else if(((address + kte) % 4) == 1 || ((address + kte) % 4) == -1){
+        res = 0xffff00ff;
+        aux = mem[address + (kte / 4)];
+        datab <<= 8;
+        res &= aux;
+        mem[address + (kte / 4)] = res | datab;
+    }
+    else if(((address + kte) % 4) == 2 || ((address + kte) % 4) == -2){
+        res = 0xff00ffff;
+        aux = mem[address + (kte / 4)];
+        datab <<= 16;
+        res &= aux;
+        mem[address + (kte / 4)] = res | datab;
+    }
+    else if(((address + kte) % 4) == 3 || ((address + kte) % 4) == -3){
+        res = 0x00ffffff;
+        aux = mem[address + (kte / 4)];
+        datab <<= 24;
+        res &= aux;
+        mem[address + (kte / 4)] = res | datab;
+    }
+}
+
+void dump_mem(uint32_t address, uint32_t size){
+    uint32_t i, j;
+    for(i = address, j = 0; j < size; j++){
+        printf("mem[%d] = 0x%08x\n", j, mem[j + address]);
+    }
+}
 void run(){
     char opcode[6];
-    uint32_t address, dataw, resfunc32;
-    int16_t kte, datahw, resfunc16;
+    uint32_t address, size, dataw, resfunc32;
+    int16_t kte, resfunc16, datahw;
     uint16_t resfunc16u;
-    int8_t datab, resfunc8;
+    int8_t resfunc8, datab;
     uint8_t resfunc8u;
     int flagrun = 1;
     do{
@@ -187,16 +254,28 @@ void run(){
             printf("mem[%d] = %u\n", address, resfunc8u);   
         }
         else if(strcmp(opcode, "sw") == 0){
-            printf("sw!!!\n");
+            printf("Digite o endereco, a constante(multiplos de 4) e o dado a ser guardado\n\n");
+            printf(">>");
             scanf("%u %hd %x", &address, &kte, &dataw);	//escreve palavra inteira(MULTIPLO DE 4)
+            sw(address, kte, dataw);
         }
         else if(strcmp(opcode, "sh") == 0){
-            printf("sh!!!\n");
+            printf("Digite o endereco, a constante(multiplos de 2) e o dado a ser guardado\n\n");
+            printf(">>");
             scanf("%u %hd %hx", &address, &kte, &datahw);	//escreve meia palavra(MULTIPLO DE 2)
+            sh(address, kte, datahw);
         }
         else if(strcmp(opcode, "sb") == 0){
-            printf("sb!!!\n");
+            printf("Digite o endereco, a constante o dado a ser guardado\n\n");
+            printf(">>");
             scanf("%u %hd %hhx", &address, &kte, &datab);	//escreve byte
+            sb(address, kte, datab);
+        }
+        else if(strcmp(opcode, "dump") == 0){
+            printf("Digite o endereco de inicio e o tamanho da memoria a ser lida\n\n");
+            printf(">>");
+            scanf("%u %u", &address, &size);
+            dump_mem(address, size);
         }
         else if(strcmp(opcode, "exit")){
             flagrun = 0;
