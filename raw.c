@@ -7,10 +7,6 @@
 //int8_t ------- hhx(hex); hhd,hhi(dec signed); hhu(dec unsigned);
 
 #define MEM_SIZE 4096
-void run();
-void sw();
-void sh();
-void sb();
 
 int32_t mem[MEM_SIZE];
 
@@ -166,57 +162,69 @@ void sh(uint32_t address, int16_t kte, int16_t datahw){
 }
 
 void sb(uint32_t address, int16_t kte, int8_t datab){
-    int32_t res, aux;
+    int32_t res, aux, datab_intow = 0x00000000;
+    printf("%hd", kte);
     if(((address + kte) % 4) == 0){
         res = 0xffffff00;
         aux = mem[address + (kte / 4)];
         res &= aux;
         mem[address + (kte / 4)] = res | datab;
     }
-    else if(((address + kte) % 4) == 1 || ((address + kte) % 4) == -1){
+    else if(kte == 1){
         res = 0xffff00ff;
         aux = mem[address + (kte / 4)];
-        datab <<= 8;
+        datab_intow |= datab;
+        printf("databintow = %08x\n", datab_intow);
+        datab_intow <<= 8;
         res &= aux;
-        mem[address + (kte / 4)] = res | datab;
+        mem[address + (kte / 4)] = res | datab_intow;
+        printf("aux = %08x\n", aux);
+        printf("datab = %08hhx\n", datab);
+        printf("databintow = %08x\n", datab_intow);
+        printf("res = %08x\n", res);
+        printf("mem = %08x\n", mem[address + (kte / 4)]);
     }
     else if(((address + kte) % 4) == 2 || ((address + kte) % 4) == -2){
         res = 0xff00ffff;
         aux = mem[address + (kte / 4)];
-        datab <<= 16;
+        datab_intow |= datab;
+        datab_intow <<= 16;
         res &= aux;
-        mem[address + (kte / 4)] = res | datab;
+        mem[address + (kte / 4)] = res | datab_intow;
     }
     else if(((address + kte) % 4) == 3 || ((address + kte) % 4) == -3){
         res = 0x00ffffff;
         aux = mem[address + (kte / 4)];
-        datab <<= 24;
+        datab_intow |= datab;
+        datab_intow <<= 24;
         res &= aux;
-        mem[address + (kte / 4)] = res | datab;
+        mem[address + (kte / 4)] = res | datab_intow;
     }
 }
 
 void dump_mem(uint32_t address, uint32_t size){
     uint32_t i, j;
-    for(i = address, j = 0; j < size; j++){
+    for(i = 0, j = 0; i < size; j++, i += 4){
         printf("mem[%d] = 0x%08x\n", j, mem[j + address]);
     }
 }
 void run(){
     char opcode[6];
     uint32_t address, size, dataw, resfunc32;
-    int16_t kte, resfunc16, datahw;
+    int16_t kte, resfunc16, datahw, auxkte;
     uint16_t resfunc16u;
     int8_t resfunc8, datab;
     uint8_t resfunc8u;
     int flagrun = 1;
     do{
-        printfmenu();
-        scanf("%s ", opcode);
+        printmenu();
+        scanf(" %s", opcode);
         if(strcmp(opcode, "lw") == 0){
             printf("Digite o endereco e a constante(multiplos de 4) para leitura da palavra\n\n");
             printf(">>");
             scanf("%u %hd", &address, &kte);	//retorna hex(MULTIPLO DE 4)
+            printf("address = %08x\n", address);
+            printf("kte = %d\n", kte);
             resfunc32 = lw(address, kte);
             printf("mem[%d] = 0x%08x\n", address, resfunc32);
             printf("mem[%d] = %d\n", address, resfunc32);
@@ -234,7 +242,6 @@ void run(){
             printf(">>");
             scanf("%u %hd", &address, &kte);
             resfunc16u = lhu(address, kte);       //retorna inteiro sem sinal(MULTIPLO DE 2)
-            printf("mem[%d] = 0x%04hx\n", address, resfunc16u);
             printf("mem[%d] = %u\n", address, resfunc16u);     
         }
         else if(strcmp(opcode, "lb") == 0){
@@ -250,26 +257,32 @@ void run(){
             printf(">>");
             scanf("%u %hd", &address, &kte);
             resfunc8u = lbu(address, kte);       //retorna inteiro sem sinal
-            printf("mem[%d] = 0x%04hx\n", address, resfunc8u);
             printf("mem[%d] = %u\n", address, resfunc8u);   
         }
         else if(strcmp(opcode, "sw") == 0){
             printf("Digite o endereco, a constante(multiplos de 4) e o dado a ser guardado\n\n");
             printf(">>");
-            scanf("%u %hd %x", &address, &kte, &dataw);	//escreve palavra inteira(MULTIPLO DE 4)
+            scanf("%u %hd", &address, &kte);
+            auxkte = kte;
+            scanf("%x", &dataw);
             sw(address, kte, dataw);
         }
         else if(strcmp(opcode, "sh") == 0){
             printf("Digite o endereco, a constante(multiplos de 2) e o dado a ser guardado\n\n");
             printf(">>");
-            scanf("%u %hd %hx", &address, &kte, &datahw);	//escreve meia palavra(MULTIPLO DE 2)
-            sh(address, kte, datahw);
+            scanf("%u %hd", &address, &kte);
+            auxkte = kte;
+            scanf("%hx", &datahw);
+            sh(address, auxkte, datahw);
         }
         else if(strcmp(opcode, "sb") == 0){
             printf("Digite o endereco, a constante o dado a ser guardado\n\n");
             printf(">>");
-            scanf("%u %hd %hhx", &address, &kte, &datab);	//escreve byte
-            sb(address, kte, datab);
+            scanf("%u %hd", &address, &kte);
+            //escreve byte
+            auxkte = kte;
+            scanf("%hhx", &datab);
+            sb(address, auxkte, datab);
         }
         else if(strcmp(opcode, "dump") == 0){
             printf("Digite o endereco de inicio e o tamanho da memoria a ser lida\n\n");
