@@ -1,10 +1,19 @@
+/*#####################################################
+  # UNIVERSIDADE DE BRASILIA                          #
+  # MATERIA: OAC - 116394                             #
+  # Ian Nery Bandeira - 17/0144739                    #
+  # gcc (Ubuntu 7.2.0-8ubuntu3.2) 7.2.0               #
+  # SO - Ubuntu 17.10                                 #
+  # Compilado no terminal / Editado em Sublime Text 3 #
+  ##################################################### */
+
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-//int32_t ------ x(hex);     d,  i(dec signed);   u(dec unsigned);
-//int16_t ------ hx(hex);   hd, hi(dec signed);  hu(dec unsigned);
-//int8_t ------- hhx(hex); hhd,hhi(dec signed); hhu(dec unsigned);
+//int32_t ------   x(hex);   d,  i(dec signed);   u(dec unsigned);
+//int16_t ------  hx(hex);  hd, hi(dec signed);  hu(dec unsigned);
+//int8_t  ------ hhx(hex); hhd,hhi(dec signed); hhu(dec unsigned);
 
 #define MEM_SIZE 4096
 
@@ -316,7 +325,7 @@ void run(){                                                     // Funcao utiliz
             getchar();
             getchar();
         }
-        else if(strcmp(opcode, "exit")){
+        else if(strcmp(opcode, "exit") == 0){
             break;        // Sai do programa
         }
     }while(flagrun);
