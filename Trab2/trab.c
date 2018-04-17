@@ -186,7 +186,7 @@ void sb(){
         res &= 0x00ffffff;
         R[rt] &= 0x000000ff;
         R[rt] <<= 24;
-        mem[(R[rs] + (k16))/4] = res | datab_intow;
+        mem[(R[rs] + (k16))/4] = res | R[rt];
     }
 }
 void execute(){
@@ -327,8 +327,20 @@ void execute(){
                 }
                 break;
             case BLEZ:
+                if(R[rs] <= 0){
+                    pc += 4 + k16;
+                }
+                else{
+                    pc += 4;
+                }
                 break;
             case BGTZ:
+                if(R[rs] > 0){
+                    pc += 4 + k16;
+                }
+                else{
+                    pc += 4;
+                }
                 break;
             case ADDI:
                 R[rt] = R[rs] + k16;
@@ -419,23 +431,46 @@ void readbin(){
     }
 
 }
+
+void printinstr(){
+    printf("1.\tRodar Programa\n2.\tDump memory\n3.\tDump reg\nDigite um numero:");
+}
+
+void dump_mem(){
+    for(int i = 0; i < 2048; i+= 4){
+        printf("text\n");
+        printf("mem[%d] = %x\t\tmem[%d] = %x\t\tmem[%d] = %x\t\tmem[%d] = %x\n", i, mem[i], i+1, mem[i+1], i+2, mem[i+2], i+3, mem[i+3]);
+    }
+    for(int i = 2048; i < 4096; i+= 4){
+        printf("data\n");
+        printf("mem[%d] = %x\t\tmem[%d] = %x\t\tmem[%d] = %x\t\tmem[%d] = %x\n", i, mem[i], i+1, mem[i+1], i+2, mem[i+2], i+3, mem[i+3]);
+    }
+    getchar();
+    getchar();
+}
+void dump_reg(){
+    for(int i = 0; i < 32; i++){
+        printf("R[%d] = %x\n", i, R[i]);
+    }
+}
+
 int main(){
     int numinstr = 0;
     pc = 0;
     R[0] = 0;
     readbin();
     while(numinstr != 4){
-        //printinstr();
+        printinstr();
         scanf("%d", &numinstr);
         switch(numinstr){
             case 1:
                 run();
                 break;
             case 2:
-                //dump_mem();
+                dump_mem();
                 break;
             case 3:
-                //dump_reg();
+                dump_reg();
                 break;
         }
     }
