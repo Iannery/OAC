@@ -16,7 +16,7 @@
 //int8_t  ------ hhx(hex); hhd,hhi(dec signed); hhu(dec unsigned);
  
 #define MEM_SIZE 4096
-#define MEM_TEXT 0 
+#define MEM_TEXT 0
 #define MEM_DATA 2048
 FILE *fp;
 int flag_run = 1, flagimm_neg = 0;
@@ -51,6 +51,22 @@ SLL=0x00,   SRL=0x02,   SRA=0x03,   SYSCALL=0x0c,  MFHI=0x10,   MFLO=0x12
     16IMM   16          0xffff              0 right
     26IMM   26          0x3ffffff           0 right
 */
+
+void print_intruc(){
+    printf("==================\n");
+    printf("|RI   |0x%08x|\n", ri);
+    printf("==================\n");
+    printf("|opcode |%08x|\n", opcode);
+    printf("|rs     |%08x|\n", rs);
+    printf("|rt     |%08x|\n", rt);
+    printf("|rd     |%08x|\n", rd);
+    printf("|shamt  |%08x|\n", shamt);
+    printf("|funct  |%08x|\n", funct);
+    printf("|K16    |%08x|\n", k16);
+    printf("|K26    |%08x|\n", k26);
+    printf("==================\n");
+    
+}
 void decode(){
     uint32_t mask_sixbits = 0x3f;
     uint32_t mask_fivebits = 0x1f;
@@ -64,7 +80,7 @@ void decode(){
     rs = ri >> 21;
     rs &= mask_fivebits;
  
-    rt = ri >> 15;
+    rt = ri >> 16;
     rt &= mask_fivebits;
  
     rd = ri >> 11;
@@ -190,6 +206,7 @@ void sb(){
     }
 }
 void execute(){
+    int32_t AUX;
     int64_t auxmult;
     int64_t maskmult = 0x00000000ffffffff;
     if(opcode == EXT){
@@ -251,14 +268,57 @@ void execute(){
                 break;
             case SYSCALL:
                 switch(R[2]){
-                    case 10:
-                        flag_run = 0;
-                        break;
                     case 1:
                         printf("%d\n", R[4]);
                         break;
-                    case 4:
-                        puts(R[4]);
+                    // case 4:
+                    //     AUX = 0;
+                    //     while(mem[R[4]/4 + AUX] != 0){
+                    //       uint32_t seg = mem[R[4]/4 + AUX];
+                    //       if (R[4]%4 != 0 && AUX == 0) {
+                    //         for (int j = 0; j < R[4]%4; j++) {
+                    //           seg &= 0xFFFFFF00 << j*8;
+                    //         }
+                    //       }
+                    //       char chars[4];
+
+                    //       chars[0] = seg & 0xFF;
+                    //       chars[1] = (seg >> 8) & 0xFF;
+                    //       chars[2] = (seg >> 16) & 0xFF;
+                    //       chars[3] = (seg >> 24) & 0xFF;
+
+                    //       if (chars[3] == '\0' && R[4]%4 == 0) {
+                    //         std::cout << chars[2] << chars[1] << chars[0];
+                    //         break;
+                    //       }
+                    //       if (chars[2] == '\0' && R[4]%4 == 0) {
+                    //         std::cout << chars[1] << chars[0];
+                    //         break;
+                    //       }
+                    //       if (chars[1] == '\0' && R[4]%4 == 0) {
+                    //         std::cout << chars[0];
+                    //         break;
+                    //       }
+                    //       if (chars[0] == '\0' && R[4]%4 == 0) {
+                    //         break;
+                    //       }
+
+                    //       if(mem[R[4]/4 + 2*AUX] == 0 && chars[0] == ':')
+                    //           cout << ":";
+
+                    //       if(chars[0] == ':'  && chars[2] == '\0' && chars[3] == ' ')
+                    //           cout << chars[3];
+                    //       else{
+                    //           for (int j = 0; j < 4; j++) {
+                    //             std::cout << chars[j];
+                    //           }
+                    //       }
+
+                    //       AUX++;
+                    //     }
+                    //     break;
+                    case 10:
+                        flag_run = 0;
                         break;
                 }
                 pc += 4;
@@ -344,6 +404,7 @@ void execute(){
                 break;
             case ADDI:
                 R[rt] = R[rs] + k16;
+                pc += 4;
                 break;
             case SLTI:
                 R[rt] = R[rs] < k16 ? 1 : 0;
@@ -361,18 +422,21 @@ void execute(){
                     k16 &= 0x0000ffff;
                 }
                 R[rt] = R[rs] & k16;
+                pc += 4;
                 break;
             case ORI:
                 if(flagimm_neg){
                     k16 &= 0x0000ffff;
                 }
                 R[rt] = R[rs] | k16;
+                pc += 4;
                 break;
             case XORI:
                 if(flagimm_neg){
                     k16 &= 0x0000ffff;
                 }
                 R[rt] = R[rs] ^ k16;
+                pc += 4;
                 break;
             case J:
                 pc = (uint32_t) k26;
@@ -392,6 +456,7 @@ void fetch(){
 void step(){
     fetch();
     decode();
+    print_intruc();
     execute(); 
 }
 
@@ -430,10 +495,12 @@ void readbin(){
         }
     }
 
+    fclose(fp);
+
 }
 
-void printinstr(){
-    printf("1.\tRodar Programa\n2.\tDump memory\n3.\tDump reg\nDigite um numero:");
+void printfirst(){
+    printf("1.\tStep\n2.\tRodar Programa\n3.\tDump memory\n4.\tDump R\nDigite um numero:");
 }
 
 void dump_mem(){
@@ -448,7 +515,7 @@ void dump_mem(){
     getchar();
     getchar();
 }
-void dump_reg(){
+void dump_R(){
     for(int i = 0; i < 32; i++){
         printf("R[%d] = %x\n", i, R[i]);
     }
@@ -459,18 +526,21 @@ int main(){
     pc = 0;
     R[0] = 0;
     readbin();
-    while(numinstr != 4){
-        printinstr();
+    while(numinstr != 5){
+        printfirst();
         scanf("%d", &numinstr);
         switch(numinstr){
             case 1:
-                run();
+                step();
                 break;
             case 2:
-                dump_mem();
+                run();
                 break;
             case 3:
-                dump_reg();
+                dump_mem();
+                break;
+            case 4:
+                dump_R();
                 break;
         }
     }
