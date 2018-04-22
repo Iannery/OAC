@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ian\Desktop\TESTE\simulation\modelsim
+Eula32b
+Z1 w1527903685
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dC:\Users\Ian\Desktop\TESTE\simulation\modelsim
+Z9 8ULA32B_fast.vho
+Z10 FULA32B_fast.vho
+l0
+L34
+V>l3^l78>BAib7HCj4HD9A1
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1527903757.068000
+Z13 !s90 -reportprogress|300|-93|-work|work|ULA32B_fast.vho|
+Z14 !s107 ULA32B_fast.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 jlXh^@^Qd9Q;ah45VlmU;2
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 6 ula32b 0 22 >l3^l78>BAib7HCj4HD9A1
+l1096
+L150
+VjbiEYUWK<kWiz2cc::m<O3
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 cODKYZ4M]n8hMBGFAKSH=1
+!i10b 1
+Eula32b_tb
+Z17 w1527880258
+R5
+R6
+R8
+Z18 8C:/Users/Ian/Desktop/TESTE/ULA32B_tb.vhd
+Z19 FC:/Users/Ian/Desktop/TESTE/ULA32B_tb.vhd
+l0
+L31
+V;;Vb6a1ko0k9YN:eeClg52
+!s100 E16MBZ3ozLZSl@YBXQUdk2
+R11
+31
+!i10b 1
+Z20 !s108 1527903757.970000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ian/Desktop/TESTE/ULA32B_tb.vhd|
+Z22 !s107 C:/Users/Ian/Desktop/TESTE/ULA32B_tb.vhd|
+R15
+R16
+Aula32b_arch
+R5
+R6
+DEx4 work 9 ula32b_tb 0 22 ;;Vb6a1ko0k9YN:eeClg52
+l56
+L35
+VjfEFLFF@cjK38QUX51bUG1
+!s100 BBCUFEok`Y3A`;6@;DLRF1
+R11
+31
+!i10b 1
+R20
+R21
+R22
+R15
+R16

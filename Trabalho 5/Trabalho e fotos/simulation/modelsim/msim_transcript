@@ -1,0 +1,302 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do breg32_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Ian/Documents/OACTRAB/Trab5/breg32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity breg32
+# -- Compiling architecture rt1 of breg32
+# 
+# vcom -93 -work work {C:/Users/Ian/Documents/OACTRAB/Trab5/simulation/modelsim/breg32.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity breg32tb
+# -- Compiling architecture breg32_arch of breg32tb
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  breg32tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps breg32tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.breg32tb(breg32_arch)
+# Loading work.breg32(rt1)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 700 ps
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 45 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 45 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 55 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 55 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 115 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 115 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 120 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 120 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 130 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 130 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 135 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 135 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 145 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 145 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 155 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 155 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 160 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 160 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 165 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 165 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 170 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 170 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 175 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 175 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 180 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 180 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 185 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 185 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 190 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 190 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 195 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 195 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 205 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 205 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 210 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 210 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 215 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 215 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 220 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 220 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 230 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 230 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 235 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 235 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 240 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 240 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 245 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 245 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 255 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 255 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 260 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 260 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 265 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 265 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 270 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 270 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 275 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 275 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 280 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 280 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 285 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 285 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 290 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 290 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 295 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 295 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 305 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 305 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 310 ps  Iteration: 1  Instance: /breg32tb/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 310 ps  Iteration: 1  Instance: /breg32tb/i1

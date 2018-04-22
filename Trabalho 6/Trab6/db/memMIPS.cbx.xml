@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="memMIPS">
+		<CBX_INST_ENTRY INSTANCE_NAME="|memMIPS|ramMIPS:ramMIPS|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_g2d1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,57 @@
+library	ieee;
+use	ieee.std_logic_1164.all;
+use	ieee.numeric_std.all;
+
+entity breg32 is
+
+port(
+
+-- clk 	= 	clock
+-- wren 	=	write enable
+-- rst	=	reset
+-- radd1	=	register add 1
+-- radd2 =	register add 2
+-- wdata	=	write data
+-- r1,r2	=	portas de saida
+ 
+		clk, wren, rst			: in std_logic;
+		radd1, radd2, wadd	: in std_logic_vector(4 downto 0);
+		wdata						: in std_logic_vector(31 downto 0);
+		r1, r2					: out std_logic_vector(31 downto 0)
+);
+end breg32;
+
+architecture rt1 of breg32 is
+	-- declarando banco de registradores como vetor de vetores(matriz)
+	type bregi is array (0 to 31) of std_logic_vector(31 downto 0);
+	signal reg 		: bregi := ((others => (others => '0')));
+	
+	signal zero		:	std_logic_vector(31 downto 0);
+	signal zeroadd	:	std_logic_vector(4 downto 0);
+begin
+
+	-- Passa pros sinais zero (32 bits) e zeroadd (5 bits) o numero 0,
+	-- para nao interferir na escrita do registrador reg(0).
+	zero <= std_logic_vector(to_unsigned(0, 32));
+	zeroadd <= std_logic_vector(to_unsigned(0, 5));
+
+	process(clk)
+		-- rstcounter serve pro loop de zerar os registradores 
+		variable rstcounter : integer;
+		
+	begin	
+		if rising_edge(clk) then
+			if(wren = '1' and wadd /= zeroadd) then
+				reg(to_integer(unsigned(wadd))) <= wdata;
+			end if;
+			
+			if(rst = '1') then
+				for rstcounter in 1 to 31 loop
+					reg(rstcounter) <= zero;
+				end loop;
+			end if;
+		end if;
+		r1 <= reg(to_integer(unsigned(radd1)));
+		r2 <= reg(to_integer(unsigned(radd2)));
+	end process;	
+end rt1;

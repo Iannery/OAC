@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ian\Documents\OACTRAB\Trab5\simulation\modelsim
+Ebreg32
+Z1 w1528325219
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Ian\Documents\OACTRAB\Trab5\simulation\modelsim
+Z6 8C:/Users/Ian/Documents/OACTRAB/Trab5/breg32.vhd
+Z7 FC:/Users/Ian/Documents/OACTRAB/Trab5/breg32.vhd
+l0
+L5
+VzQgH4i>E:d:2odGQ0D^Da0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1528487296.101000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ian/Documents/OACTRAB/Trab5/breg32.vhd|
+Z11 !s107 C:/Users/Ian/Documents/OACTRAB/Trab5/breg32.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 Ue<F@UDhELF5T@njDbe`m1
+!i10b 1
+Art1
+R2
+R3
+R4
+DEx4 work 6 breg32 0 22 zQgH4i>E:d:2odGQ0D^Da0
+l31
+L24
+VhIjUhY5Io3@FEOhJN4>]00
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 S@Sz`GPPkz`:LRF=R`IFz3
+!i10b 1
+Ebreg32tb
+Z14 w1528424538
+R2
+R3
+R4
+R5
+Z15 8C:/Users/Ian/Documents/OACTRAB/Trab5/simulation/modelsim/breg32.vht
+Z16 FC:/Users/Ian/Documents/OACTRAB/Trab5/simulation/modelsim/breg32.vht
+l0
+L32
+VRWzao]OKT7ofj`gL86IZD1
+!s100 Z?N:nElCfg7oD6AAALA_i2
+R8
+31
+!i10b 1
+Z17 !s108 1528487296.778000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ian/Documents/OACTRAB/Trab5/simulation/modelsim/breg32.vht|
+Z19 !s107 C:/Users/Ian/Documents/OACTRAB/Trab5/simulation/modelsim/breg32.vht|
+R12
+R13
+Abreg32_arch
+R2
+R3
+R4
+DEx4 work 8 breg32tb 0 22 RWzao]OKT7ofj`gL86IZD1
+l68
+L34
+Vhg:`I:RcT;^eV@NkPYk:k3
+!s100 bL[U[?PcW]aMW@Q5A=KW_3
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

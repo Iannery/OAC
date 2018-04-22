@@ -1,0 +1,183 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 264 384)
+	(text "processador" (rect 5 0 54 12)(font "Arial" ))
+	(text "inst" (rect 8 352 20 364)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "sel_out[1..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "sel_out[1..0]" (rect 21 27 68 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" ))
+		(text "clock" (rect 21 43 41 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clock_mem" (rect 0 0 47 12)(font "Arial" ))
+		(text "clock_mem" (rect 21 59 68 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "out0[31..0]" (rect 0 0 40 12)(font "Arial" ))
+		(text "out0[31..0]" (rect 187 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "r1_dado[31..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "r1_dado[31..0]" (rect 172 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "r2_dado[31..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "r2_dado[31..0]" (rect 171 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "din_breg[31..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "din_breg[31..0]" (rect 170 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "ctrl_op_ula[3..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "ctrl_op_ula[3..0]" (rect 164 91 227 103)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "ctr_reg_dst_wf" (rect 0 0 62 12)(font "Arial" ))
+		(text "ctr_reg_dst_wf" (rect 165 107 227 119)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112)(line_width 1))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "ctr_orig_alu_wf" (rect 0 0 62 12)(font "Arial" ))
+		(text "ctr_orig_alu_wf" (rect 165 123 227 135)(font "Arial" ))
+		(line (pt 248 128)(pt 232 128)(line_width 1))
+	)
+	(port
+		(pt 248 144)
+		(output)
+		(text "ctr_mem_para_reg_wf" (rect 0 0 95 12)(font "Arial" ))
+		(text "ctr_mem_para_reg_wf" (rect 132 139 227 151)(font "Arial" ))
+		(line (pt 248 144)(pt 232 144)(line_width 1))
+	)
+	(port
+		(pt 248 160)
+		(output)
+		(text "ctr_escreve_reg_wf" (rect 0 0 83 12)(font "Arial" ))
+		(text "ctr_escreve_reg_wf" (rect 144 155 227 167)(font "Arial" ))
+		(line (pt 248 160)(pt 232 160)(line_width 1))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "ctr_le_mem_wf" (rect 0 0 64 12)(font "Arial" ))
+		(text "ctr_le_mem_wf" (rect 163 171 227 183)(font "Arial" ))
+		(line (pt 248 176)(pt 232 176)(line_width 1))
+	)
+	(port
+		(pt 248 192)
+		(output)
+		(text "ctr_escreve_mem_wf" (rect 0 0 92 12)(font "Arial" ))
+		(text "ctr_escreve_mem_wf" (rect 135 187 227 199)(font "Arial" ))
+		(line (pt 248 192)(pt 232 192)(line_width 1))
+	)
+	(port
+		(pt 248 208)
+		(output)
+		(text "ctr_branch_wf" (rect 0 0 59 12)(font "Arial" ))
+		(text "ctr_branch_wf" (rect 168 203 227 215)(font "Arial" ))
+		(line (pt 248 208)(pt 232 208)(line_width 1))
+	)
+	(port
+		(pt 248 224)
+		(output)
+		(text "ctr_branchn_wf" (rect 0 0 63 12)(font "Arial" ))
+		(text "ctr_branchn_wf" (rect 164 219 227 231)(font "Arial" ))
+		(line (pt 248 224)(pt 232 224)(line_width 1))
+	)
+	(port
+		(pt 248 240)
+		(output)
+		(text "ctr_jump_wf" (rect 0 0 50 12)(font "Arial" ))
+		(text "ctr_jump_wf" (rect 177 235 227 247)(font "Arial" ))
+		(line (pt 248 240)(pt 232 240)(line_width 1))
+	)
+	(port
+		(pt 248 256)
+		(output)
+		(text "ctr_jal_wf" (rect 0 0 38 12)(font "Arial" ))
+		(text "ctr_jal_wf" (rect 189 251 227 263)(font "Arial" ))
+		(line (pt 248 256)(pt 232 256)(line_width 1))
+	)
+	(port
+		(pt 248 272)
+		(output)
+		(text "ctr_lui_wf" (rect 0 0 38 12)(font "Arial" ))
+		(text "ctr_lui_wf" (rect 189 267 227 279)(font "Arial" ))
+		(line (pt 248 272)(pt 232 272)(line_width 1))
+	)
+	(port
+		(pt 248 288)
+		(output)
+		(text "ctr_jerror_wf" (rect 0 0 53 12)(font "Arial" ))
+		(text "ctr_jerror_wf" (rect 174 283 227 295)(font "Arial" ))
+		(line (pt 248 288)(pt 232 288)(line_width 1))
+	)
+	(port
+		(pt 248 304)
+		(output)
+		(text "overflow" (rect 0 0 34 12)(font "Arial" ))
+		(text "overflow" (rect 193 299 227 311)(font "Arial" ))
+		(line (pt 248 304)(pt 232 304)(line_width 1))
+	)
+	(port
+		(pt 248 320)
+		(output)
+		(text "saida_epc[31..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "saida_epc[31..0]" (rect 164 315 227 327)(font "Arial" ))
+		(line (pt 248 320)(pt 232 320)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 352)(line_width 1))
+	)
+)

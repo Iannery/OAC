@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ian\Desktop\IanNeryBandeira170144739\simulation\modelsim
+Eula32b
+Z1 w1527879961
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Ian\Desktop\IanNeryBandeira170144739\simulation\modelsim
+Z6 8C:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B.vhd
+Z7 FC:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B.vhd
+l0
+L5
+V9]0>iOTJg[:PBbajGF:P_2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1528059050.114000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B.vhd|
+Z11 !s107 C:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 kVo4`GK7EbCM_QL6RoXJO3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 6 ula32b 0 22 9]0>iOTJg[:PBbajGF:P_2
+l19
+L16
+V<CC5L3LiC3:Kg@RD0mCBP2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 <M^;=Me9Ji6_O2LSH78Z?1
+!i10b 1
+Eula32b_tb
+Z14 w1527880258
+R3
+R4
+R5
+Z15 8C:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B_tb.vhd
+Z16 FC:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B_tb.vhd
+l0
+L31
+V;;Vb6a1ko0k9YN:eeClg52
+!s100 E16MBZ3ozLZSl@YBXQUdk2
+R8
+31
+!i10b 1
+Z17 !s108 1528059050.524000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B_tb.vhd|
+Z19 !s107 C:/Users/Ian/Desktop/IanNeryBandeira170144739/ULA32B_tb.vhd|
+R12
+R13
+Aula32b_arch
+R3
+R4
+DEx4 work 9 ula32b_tb 0 22 ;;Vb6a1ko0k9YN:eeClg52
+l56
+L35
+VjfEFLFF@cjK38QUX51bUG1
+!s100 BBCUFEok`Y3A`;6@;DLRF1
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

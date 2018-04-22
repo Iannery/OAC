@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ian\Desktop\mips_uniciclo-master\simulation\qsim
+vProcessador_mips_final
+Z1 IHi?6T``amIiTM<5d=P^1F2
+Z2 VDEm9LQd<ojB3<1nXKMXRX2
+Z3 dC:\Users\eden\Desktop\OAC\Projeto\mips_uniciclo-master\simulation\qsim
+Z4 w1531013040
+Z5 8Processador_mips.vo
+Z6 FProcessador_mips.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Processador_mips.vo|
+Z9 o-work work -O0
+Z10 n@processador_mips_final
+!i10b 1
+Z11 !s100 N?RM;5iLIga6RQjk`DmTc3
+!s85 0
+Z12 !s108 1531013042.303000
+Z13 !s107 Processador_mips.vo|
+!s101 -O0
+vProcessador_mips_final_vlg_check_tst
+!i10b 1
+!s100 Fld8Z?QYkn<WoZA1MZOHf3
+IELzbH[5G:Bog_4J2FkCA`0
+Vd:ZaANM_EV;zP@zYE_6RG1
+R3
+Z14 w1531013038
+Z15 8Processador_mips.vt
+Z16 FProcessador_mips.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1531013043.556000
+Z18 !s107 Processador_mips.vt|
+Z19 !s90 -work|work|Processador_mips.vt|
+!s101 -O0
+R9
+Z20 n@processador_mips_final_vlg_check_tst
+vProcessador_mips_final_vlg_sample_tst
+!i10b 1
+Z21 !s100 Zel3SLa:f:gML=>3oWMld2
+Z22 I@nU7=g>PU471`MB[Obe:@2
+Z23 VSkG5j5V726Tb^D6LWIf>d1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z24 n@processador_mips_final_vlg_sample_tst
+vProcessador_mips_final_vlg_vec_tst
+!i10b 1
+!s100 TRzzgdHCeDDe`KHVkV4YK2
+I9VGSj71flJil1gl9=NS?61
+Z25 VaTmlWEkmK<;[@o8]4WzQ?0
+R3
+R14
+R15
+R16
+L0 3498
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z26 n@processador_mips_final_vlg_vec_tst

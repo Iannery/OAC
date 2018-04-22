@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Processador_mips">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Processador_mips_final|processador:inst|fetch:fetch|memoria_instrucoes:memoria_intrucoes|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7a81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Processador_mips_final|processador:inst|mem_final:mem_final|memoria_dados:memoria_dados|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6rc1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

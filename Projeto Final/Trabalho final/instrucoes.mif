@@ -1,0 +1,68 @@
+DEPTH = 256;                   -- The size of memory in words
+WIDTH = 32;                    -- The size of data in bits
+ADDRESS_RADIX = HEX;          -- The radix for address values
+DATA_RADIX = HEX;             -- The radix for data values
+CONTENT                       -- start of (address : data pairs)
+BEGIN
+
+00 : 340800ff;               -- memory address : data
+01 : 310800f0;	
+02 : 8c092000; 	
+03 : 8c0a2004;	
+04 : 012a5820;	
+05 : ac0b2008;	
+06 : 8c042008;	
+07 : 200c70f0;	
+08 : 200d00ff;	
+09 : 01ac7024;	
+0A : 01ac7825;	
+0B : 01acc026;	
+0C : 01ac4027;	
+0D : 000d4900;	
+0E : 3c0aff00;	
+0F : 000a5902;	
+10 : 000a6103;	
+11 : 2408ffff;	
+12 : 24090001;	
+13 : 0109802a;	
+14 : 0128882a;	
+15 : 0008982b;	
+16 : 0100a02b;	
+17 : 0c000019;	
+18 : 0800001c;	
+19 : 01095822;	
+1A : 01286023;	
+1B : 03e00008;	
+1C : 2008fffe;	
+1D : 21080002;	
+1E : 1100fffe;	
+1F : 2108ffff;	
+20 : 1500fffe;	
+21 : 3c108000;	
+22 : 3c118000;	
+23 : 02119821;	
+24 : 0211a020;	
+
+[25..C9] : 00000000;
+CA : fc000000;
+[CB..FF] : 00000000;
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

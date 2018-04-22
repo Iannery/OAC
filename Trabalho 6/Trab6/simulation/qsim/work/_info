@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ian\Desktop\TESTESTES\simulation\qsim
+vmemMIPS
+Z1 I8[Q8C_TON>QO^Q7Q5LC@n2
+Z2 VnH[Y=HiSjJHQeXM^`LQY]3
+Z3 dC:\Users\Ian\Desktop\Trabtop\Trab6\simulation\qsim
+Z4 w1529282727
+Z5 8memMIPS.vo
+Z6 FmemMIPS.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|memMIPS.vo|
+Z9 o-work work -O0
+Z10 nmem@m@i@p@s
+!i10b 1
+Z11 !s100 hY>6@E>ihR;<FmCiR8Z;z2
+!s85 0
+Z12 !s108 1529282728.332000
+Z13 !s107 memMIPS.vo|
+!s101 -O0
+vmemMIPS_vlg_check_tst
+!i10b 1
+Z14 !s100 GF7<_LoVfk8hHTSaRS_oP2
+Z15 IkWef4^A^ITbglUG6TDiX=3
+Z16 V3oBC8YJJ1`eAJ7Of9zc;d2
+R3
+Z17 w1529282726
+Z18 8memMIPS.vt
+Z19 FmemMIPS.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z20 !s108 1529282728.642000
+Z21 !s107 memMIPS.vt|
+Z22 !s90 -work|work|memMIPS.vt|
+!s101 -O0
+R9
+Z23 nmem@m@i@p@s_vlg_check_tst
+vmemMIPS_vlg_sample_tst
+!i10b 1
+Z24 !s100 MR_QWO3>^>@aRo[fUHROT3
+Z25 Ikz>9UIUYCPbGozdGYCeYh3
+Z26 V:EK@1NQM@98LX`^AeXWn>3
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 nmem@m@i@p@s_vlg_sample_tst
+vmemMIPS_vlg_vec_tst
+!i10b 1
+Z28 !s100 WS4K>aRd2:iY_dA?<nTzC1
+Z29 IjETVTj[VQOZ5_1TTzfBW43
+Z30 VF^^4onmX0Cg3i`AWJAQ[W1
+R3
+R17
+R18
+R19
+Z31 L0 727
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 nmem@m@i@p@s_vlg_vec_tst
